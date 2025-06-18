@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlist</title>
+</head>
+<body>
+<h1>Danh sách Playlist</h1>
+<ul>
+    <li th:each="playlist : ${playlists}" th:text="${playlist.name}"></li>
+</ul>
+
+<form action="/playlist/add" method="post">
+    <input type="text" name="name" placeholder="Tên playlist">
+    <button type="submit">Thêm Playlist</button>
+</form>
+</body>
+</html>
