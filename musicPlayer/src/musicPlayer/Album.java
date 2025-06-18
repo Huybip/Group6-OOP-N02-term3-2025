@@ -6,11 +6,11 @@ public class Album {
     private String albumID;
     private String title;
     private String artistName;
-    private ArrayList<Songs> songs;
+    private ArrayList<Song> songs;
     private String publisher;
     private int duration;
 
-    public Album(String albumID, String title, String artistName, ArrayList<Songs> songs, String publisher, int duration) {
+    public Album(String albumID, String title, String artistName, ArrayList<Song> songs, String publisher, int duration) {
         try {
             this.albumID = albumID;
             this.title = title;
@@ -58,18 +58,18 @@ public class Album {
         }
     }
 
-    public ArrayList<Songs> getSongs() {
-        return songs;
+    public ArrayList<Song> getSongs() {
+        return song;
     }
 
     public void printSongList() {
         try {
-            if (songs == null || songs.isEmpty()) {
+            if (song == null || song.isEmpty()) {
                 System.out.println("Album không có bài hát nào.");
                 return;
             }
             System.out.println("Danh sách bài hát trong album \"" + title + "\":");
-            for (Songs song : songs) {
+            for (Song song : song) {
                 System.out.println("- " + song.getTitle() + " (" + song.getArtist() + ")");
             }
         } catch (Exception e) {

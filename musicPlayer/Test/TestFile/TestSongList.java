@@ -23,7 +23,7 @@ public class TestSongList {
     }
 
     public void testEditDelete() {
-        SongsList songsList = new SongsList();
+        SongList songsList = new SongList();
         ArrayList<Songs> songs = addList();
         for (Songs s : songs) {
             songsList.addSong(s);
@@ -57,7 +57,7 @@ public class TestSongList {
         scanner.close();
     }
 
-    public void testDelete(SongsList songsList, String songID) {
+    public void testDelete(SongList songsList, String songID) {
         songsList.deleteSong(songID);
         songsList.printSongsList();
     }

@@ -2,10 +2,10 @@ package musicPlayer;
 
 import java.util.ArrayList;
 
-public class SongsList {
-    ArrayList<Songs> songs = new ArrayList<>();
+public class SongList {
+    ArrayList<Song> songs = new ArrayList<>();
 
-    public ArrayList<Songs> addSong(Songs song) {
+    public ArrayList<Song> addSong(Song song) {
         try {
             songs.add(song);
             return songs;
@@ -18,7 +18,7 @@ public class SongsList {
         }
     }
 
-    public ArrayList<Songs> editSong(String newTitle, String songID) {
+    public ArrayList<Song> editSong(String newTitle, String songID) {
         try {
             for (int i = 0; i < songs.size(); i++) {
                 if (songs.get(i).getSongID().equals(songID)) {
@@ -35,7 +35,7 @@ public class SongsList {
         }
     }
 
-    public ArrayList<Songs> deleteSong(String songID) {
+    public ArrayList<Song> deleteSong(String songID) {
         try {
             for (int i = 0; i < songs.size(); i++) {
                 if (songs.get(i).getSongID().equals(songID)) {
@@ -55,7 +55,7 @@ public class SongsList {
 
     public void printSongsList() {
         try {
-            for (Songs song : songs) {
+            for (Song song : song) {
                 System.out.println("Song ID: " + song.getSongID() + " Title: " + song.getSongTitle());
             }
         } catch (Exception e) {
